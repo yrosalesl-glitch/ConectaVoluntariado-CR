@@ -22,8 +22,8 @@ ConectaVoluntariado CR es una aplicación web que busca centralizar la gestión 
 
 ## Documentación
 
-- **ERS en Word:** [ERS editable](docs/requirements/ERS.docx)
-- **ERS en PDF:** [ERS en PDF](docs/requirements/ERS-ConectaVoluntariado-Equipo5-v1.0.pdf)
+- **ERS en Word:** [Ver documento editable](docs/requirements/ERS-ConectaVoluntariado-Equipo5-v1.0.docx.docx)
+- **ERS en PDF:** [Ver documento PDF](docs/requirements/ERS-ConectaVoluntariado-Equipo5-v1.0%20(1).pdf)
 - **Matriz de trazabilidad:** [Ver matriz](docs/requirements/traceability-matrix.md)
 
 ## Tecnologías previstas
