@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Únete a ConectaVoluntariado CR y participa en iniciativas que generan impacto social y ambiental en Costa Rica.">
+
+    <meta name="author" content="ConectaVoluntariado CR">
+
+    <title>Solicitud de participación | ConectaVoluntariado CR</title>
+
+
+   
+
+    <!-- Identidad tipográfica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Biblioteca de alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Lógica de inscripción -->
+    <script src="js/inscripcion.js" defer></script>
+
+</head>
+
+
+<body class="registration-page">
+
+
+    <!-- =========================================
+         03. ENCABEZADO INSTITUCIONAL
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="site-header__container">
+
+            <!-- Marca del proyecto -->
+            <a href="index.html"
+                class="brand"
+                aria-label="ConectaVoluntariado CR - Página de inicio">
+
+                <span class="brand__symbol" aria-hidden="true">
+                    CV
+                </span>
+
+                <span class="brand__identity">
+                    <strong class="brand__name">
+                        ConectaVoluntariado
+                    </strong>
+
+                    <span class="brand__location">
+                        COSTA RICA
+                    </span>
+                </span>
+
+            </a>
+
+
+            <!-- Navegación principal -->
+            <nav class="main-navigation"
+                aria-label="Menú principal">
+
+                <a href="index.html"
+                    class="main-navigation__link">
+                    Inicio
+                </a>
+
+                <a href="actividades.html"
+                    class="main-navigation__link">
+                    Actividades
+                </a>
+
+                <a href="inscripcion.html"
+                    class="main-navigation__link main-navigation__link--active"
+                    aria-current="page">
+                    Inscripción
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         04. CONTENIDO PRINCIPAL
+    ========================================== -->
+
+    <main id="main-content" class="registration-main">
+
+
+        <!-- -------------------------------------
+             04.1 PRESENTACIÓN DE LA INSCRIPCIÓN
+        -------------------------------------- -->
+
+        <section class="registration-hero"
+            aria-labelledby="registration-title">
+
+            <div class="registration-hero__content">
+
+                <span class="registration-hero__eyebrow">
+                    PARTICIPACIÓN CIUDADANA · COSTA RICA
+                </span>
+
+                <h1 id="registration-title"
+                    class="registration-hero__title">
+
+                    Conecta con una causa.
+                    <span>Forma parte del cambio.</span>
+
+                </h1>
+
+                <p class="registration-hero__description">
+                    Tu tiempo, tus habilidades y tus ideas pueden
+                    contribuir a construir comunidades más solidarias
+                    y sostenibles.
+                </p>
+
+            </div>
+
+
+            <!-- Elemento visual de identidad -->
+            <div class="registration-hero__visual"
+                aria-hidden="true">
+
+                <span class="registration-hero__visual-label">
+                    UNA RED DE PERSONAS
+                </span>
+
+                <span class="registration-hero__visual-number">
+                    01
+                </span>
+
+                <span class="registration-hero__visual-caption">
+                    Tu participación comienza aquí.
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- -------------------------------------
+             04.2 CONTENEDOR DE INSCRIPCIÓN
+        -------------------------------------- -->
+
+        <section class="registration-layout"
+            aria-labelledby="form-heading">
+
+
+            <!-- Encabezado del formulario -->
+            <div class="registration-heading">
+
+                <div class="registration-heading__text">
+
+                    <span class="registration-heading__eyebrow">
+                        NUEVA SOLICITUD
+                    </span>
+
+                    <h2 id="form-heading">
+                        Registro de voluntariado
+                    </h2>
+
+                    <p>
+                        Completa la siguiente información para
+                        solicitar tu participación en una actividad.
+                    </p>
+
+                </div>
+
+                <span class="registration-heading__reference"
+                    aria-label="Formulario número uno">
+                    FORM. 01
+                </span>
+
+            </div>
+
+
+
+            <!-- Indicador visual de etapas -->
+            <div class="registration-progress"
+                aria-label="Etapas del formulario">
+
+                <div class="registration-progress__step registration-progress__step--active">
+
+                    <span class="registration-progress__number">
+                        01
+                    </span>
+
+                    <span class="registration-progress__label">
+                        Tus datos
+                    </span>
+
+                </div>
+
+
+                <span class="registration-progress__connector"
+                    aria-hidden="true"></span>
+
+
+                <div class="registration-progress__step">
+
+                    <span class="registration-progress__number">
+                        02
+                    </span>
+
+                    <span class="registration-progress__label">
+                        Participación
+                    </span>
+
+                </div>
+
+
+                <span class="registration-progress__connector"
+                    aria-hidden="true"></span>
+
+
+                <div class="registration-progress__step">
+
+                    <span class="registration-progress__number">
+                        03
+                    </span>
+
+                    <span class="registration-progress__label">
+                        Confirmación
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 05. FORMULARIO DE INSCRIPCIÓN
+            ================================== -->
+
+            <form id="formInscripcion"
+                class="registration-form"
+                novalidate>
+
+
+                <!-- ---------------------------------
+                     05.1 INFORMACIÓN PERSONAL
+                ---------------------------------- -->
+
+                <fieldset class="form-fieldset personal-information">
+
+                    <legend class="form-fieldset__legend">
+                        <span class="form-fieldset__number">01</span>
+                        Información personal
+                    </legend>
+
+                    <p class="form-fieldset__description">
+                        Datos básicos para identificarte y establecer
+                        comunicación contigo.
+                    </p>
+
+
+                    <div class="form-grid">
+
+                        <!-- Nombre completo -->
+                        <div class="form-field form-field--full">
+
+                            <label for="nombre">
+                                Nombre completo
+                                <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Ej. María Rodríguez"
+                                autocomplete="name"
+                                minlength="3"
+                                required>
+
+                            <small class="form-field__hint">
+                                Ingresa tu nombre y apellidos.
+                            </small>
+
+                        </div>
+
+
+                        <!-- Correo electrónico -->
+                        <div class="form-field">
+
+                            <label for="correo">
+                                Correo electrónico
+                                <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="nombre@correo.com"
+                                autocomplete="email"
+                                required>
+
+                        </div>
+
+
+                        <!-- Teléfono -->
+                        <div class="form-field">
+
+                            <label for="telefono">
+                                Número de teléfono
+                                <span aria-hidden="true">*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="88888888"
+                                autocomplete="tel"
+                                inputmode="numeric"
+                                maxlength="8"
+                                required>
+
+                            <small class="form-field__hint">
+                                Ingresa los 8 dígitos de tu número.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+
+
+                <!-- Separador entre secciones -->
+                <div class="registration-form__divider"
+                    aria-hidden="true"></div>
+
+
+
+                <!-- ---------------------------------
+                     05.2 SELECCIÓN DE ACTIVIDAD
+                ---------------------------------- -->
+
+                <fieldset class="form-fieldset volunteer-selection">
+
+                    <legend class="form-fieldset__legend">
+                        <span class="form-fieldset__number">02</span>
+                        Selección de voluntariado
+                    </legend>
+
+                    <p class="form-fieldset__description">
+                        Elige la oportunidad en la que te gustaría
+                        colaborar.
+                    </p>
+
+
+                    <!-- Actividad disponible -->
+                    <div class="form-field form-field--full">
+
+                        <label for="actividadSelect">
+                            Actividad de interés
+                            <span aria-hidden="true">*</span>
+                        </label>
+
+                        <select
+                            id="actividadSelect"
+                            name="actividad"
+                            required>
+
+                            <option value="">
+                                Selecciona una actividad disponible
+                            </option>
+
+                        </select>
+
+                        <small class="form-field__hint">
+                            Las opciones se obtienen del catálogo
+                            de actividades disponibles.
+                        </small>
+
+                    </div>
+
+                </fieldset>
+
+
+
+                <!-- Separador entre secciones -->
+                <div class="registration-form__divider"
+                    aria-hidden="true"></div>
+
+
+
+                <!-- ---------------------------------
+                     05.3 MOTIVACIÓN DEL PARTICIPANTE
+                ---------------------------------- -->
+
+                <fieldset class="form-fieldset participation-motivation">
+
+                    <legend class="form-fieldset__legend">
+                        <span class="form-fieldset__number">03</span>
+                        Motivación y compromiso
+                    </legend>
+
+                    <p class="form-fieldset__description">
+                        Queremos conocer las razones que te impulsan
+                        a participar.
+                    </p>
+
+
+                    <div class="form-field form-field--full">
+
+                        <label for="motivacion">
+                            ¿Qué te motiva a formar parte de esta actividad?
+                            <span aria-hidden="true">*</span>
+                        </label>
+
+                        <textarea
+                            id="motivacion"
+                            name="motivacion"
+                            rows="5"
+                            minlength="20"
+                            placeholder="Comparte tus intereses, expectativas y lo que te gustaría aportar..."
+                            required></textarea>
+
+                        <small class="form-field__hint">
+                            Describe brevemente tu motivación.
+                        </small>
+
+                    </div>
+
+                </fieldset>
+
+
+
+                <!-- Separador entre secciones -->
+                <div class="registration-form__divider"
+                    aria-hidden="true"></div>
+
+
+
+                <!-- ---------------------------------
+                     05.4 CONFIRMACIÓN DE INFORMACIÓN
+                ---------------------------------- -->
+
+                <section class="consent-section"
+                    aria-labelledby="consent-heading">
+
+                    <div class="consent-section__content">
+
+                        <h3 id="consent-heading">
+                            Confirmación de solicitud
+                        </h3>
+
+                        <p>
+                            Antes de continuar, verifica que los datos
+                            proporcionados sean correctos.
+                        </p>
+
+                    </div>
+
+
+                    <label class="consent-control"
+                        for="confirmacion">
+
+                        <input
+                            type="checkbox"
+                            id="confirmacion"
+                            name="confirmacion"
+                            required>
+
+                        <span>
+                            Confirmo que la información proporcionada
+                            es correcta y deseo enviar mi solicitud
+                            de inscripción.
+                        </span>
+
+                    </label>
+
+                </section>
+
+
+
+                <!-- ---------------------------------
+                     05.5 ACCIONES DEL FORMULARIO
+                ---------------------------------- -->
+
+                <div class="form-actions">
+
+                    <div class="form-actions__information">
+
+                        <span class="form-actions__indicator"
+                            aria-hidden="true">
+                            *
+                        </span>
+
+                        <p>
+                            Los campos marcados son obligatorios.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="btnEnviar"
+                        class="btn-primary">
+
+                        <span>Enviar solicitud</span>
+
+                        <span class="btn-primary__icon"
+                            aria-hidden="true">
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- -------------------------------------
+             06. MENSAJE INSTITUCIONAL
+        -------------------------------------- -->
+
+        <aside class="registration-message">
+
+            <span class="registration-message__symbol"
+                aria-hidden="true">
+                ✳
+            </span>
+
+            <p>
+                Las grandes transformaciones comienzan con pequeñas
+                acciones y personas dispuestas a participar.
+            </p>
+
+        </aside>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         07. PIE DE PÁGINA INSTITUCIONAL
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="site-footer__container">
+
+            <p class="site-footer__copyright">
+                © 2026 ConectaVoluntariado CR.
+                Todos los derechos reservados.
+            </p>
+
+            <p class="site-footer__message">
+                Conectando personas. Transformando comunidades.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
+

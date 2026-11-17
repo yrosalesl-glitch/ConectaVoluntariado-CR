@@ -1,0 +1,2124 @@
+
+/* =====================================================
+   CONECTAVOLUNTARIADO CR
+   HOJA DE ESTILOS INSTITUCIONAL
+   Inicio · Actividades · Inscripción
+   ===================================================== */
+
+
+/* =====================================================
+   01. IDENTIDAD VISUAL Y VARIABLES
+   ===================================================== */
+
+:root {
+    /* Colores institucionales */
+    --ink: #142B32;
+    --ink-light: #203D43;
+    --paper: #F5F5EF;
+    --white: #FFFFFF;
+    --accent: #A5C96A;
+
+    /* Colores complementarios */
+    --muted: #758589;
+    --line: #DFE4DA;
+    --soft-green: #EEF2E7;
+    --green-dark: #718A55;
+
+    /* Tipografía */
+    --font-main: 'DM Sans', sans-serif;
+    --font-display: 'Manrope', sans-serif;
+
+    /* Dimensiones */
+    --container: 1240px;
+    --radius: 12px;
+
+    /* Transiciones */
+    --transition: 250ms ease;
+
+    /* Sombras */
+    --shadow-card: 0 15px 35px rgba(20, 43, 50, 0.07);
+}
+
+
+/* =====================================================
+   02. CONFIGURACIÓN GENERAL
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-main);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img,
+svg {
+    max-width: 100%;
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--ink);
+}
+
+
+/* =====================================================
+   03. ELEMENTOS COMPARTIDOS
+   ===================================================== */
+
+.section-kicker {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: #60766A;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.site-footer {
+    background: #10242A;
+    color: white;
+}
+
+
+/* =====================================================
+   04. PÁGINA DE INICIO
+   Identidad principal de ConectaVoluntariado CR
+   ===================================================== */
+
+
+/* 04.1 Encabezado */
+
+.header {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    background: rgba(245, 245, 239, 0.94);
+    border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+    max-width: var(--container);
+    min-height: 88px;
+    padding: 0 32px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Identidad de marca */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.brand-symbol {
+    width: 43px;
+    height: 43px;
+    color: var(--ink);
+    flex-shrink: 0;
+}
+
+.brand-symbol svg {
+    width: 100%;
+    height: 100%;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-text strong {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+}
+
+.brand-text strong span,
+.footer-brand span {
+    color: #7FA747;
+}
+
+.brand-text small {
+    margin-top: 5px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+/* Navegación */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.nav-item {
+    position: relative;
+    color: #627276;
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--ink);
+}
+
+.nav-item.active::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: var(--accent);
+    bottom: -10px;
+    left: 0;
+    right: 0;
+}
+
+/* Botón del encabezado */
+
+.header-cta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 13px 19px;
+
+    background: var(--ink);
+    color: var(--white);
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.header-cta:hover {
+    background: var(--ink-light);
+    transform: translateY(-2px);
+}
+
+
+/* 04.2 Hero principal */
+
+.hero {
+    max-width: var(--container);
+    margin: auto;
+    padding: 100px 32px 110px;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    color: #60766A;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #8FB957;
+    box-shadow: 0 0 0 4px rgba(165, 201, 106, 0.18);
+    flex-shrink: 0;
+}
+
+.hero h1 {
+    margin: 28px 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(43px, 5.1vw, 69px);
+    font-weight: 700;
+    line-height: 1.09;
+    letter-spacing: -3.8px;
+}
+
+.hero h1 span {
+    color: #829D65;
+}
+
+.hero-description {
+    max-width: 510px;
+    color: #637276;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* Acciones del hero */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 34px;
+}
+
+.button-primary,
+.button-outline {
+    min-height: 54px;
+    padding: 0 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.button-primary {
+    background: var(--ink);
+    color: white;
+}
+
+.button-primary:hover {
+    background: #29484A;
+    transform: translateY(-3px);
+}
+
+.button-outline {
+    border: 1px solid #CFD8CE;
+    color: var(--ink);
+}
+
+.button-outline:hover {
+    background: white;
+    border-color: var(--ink);
+}
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 48px;
+
+    color: #82908C;
+    font-size: 11px;
+}
+
+.note-line {
+    width: 30px;
+    height: 1px;
+    background: var(--accent);
+}
+
+
+/* 04.3 Visualización de red */
+
+.network-visual {
+    min-height: 475px;
+    padding: 23px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: var(--ink);
+    border-radius: 5px;
+}
+
+.network-visual::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+
+    background: rgba(165, 201, 106, 0.07);
+    filter: blur(55px);
+
+    top: 80px;
+    left: 80px;
+}
+
+.visual-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    color: #B3C4B5;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.network-art {
+    width: 100%;
+    max-height: 340px;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+}
+
+.network-lines path {
+    fill: none;
+    stroke: rgba(165, 201, 106, 0.42);
+    stroke-width: 1.5;
+}
+
+.orbit {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.12);
+    stroke-width: 1;
+    stroke-dasharray: 5 7;
+}
+
+.network-nodes circle {
+    fill: var(--accent);
+    stroke: var(--ink);
+    stroke-width: 5;
+}
+
+.central-circle {
+    fill: var(--accent);
+}
+
+.central-inner {
+    fill: var(--ink);
+}
+
+.central-symbol {
+    fill: var(--accent);
+}
+
+.visual-caption {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 17px;
+    border-top: 1px solid rgba(255, 255, 255, 0.17);
+
+    color: white;
+}
+
+.visual-caption div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.visual-caption strong {
+    font-family: var(--font-display);
+    font-size: 15px;
+}
+
+.visual-caption span {
+    color: #AABBB7;
+    font-size: 11px;
+}
+
+.visual-caption .caption-mark {
+    color: var(--accent);
+    font-size: 27px;
+}
+
+
+/* 04.4 Manifiesto */
+
+.manifesto {
+    padding: 95px max(32px, calc((100% - var(--container)) / 2));
+
+    display: grid;
+    grid-template-columns: 0.35fr 1fr;
+    gap: 50px;
+
+    background: #E9ECE3;
+}
+
+.manifesto-label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    color: #778B76;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.manifesto-label span:first-child {
+    color: var(--ink);
+    font-size: 27px;
+    letter-spacing: -1px;
+}
+
+.manifesto-content {
+    max-width: 800px;
+}
+
+.manifesto h2 {
+    margin-bottom: 25px;
+
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.2;
+    letter-spacing: -2px;
+}
+
+.manifesto h2 span {
+    color: #829D65;
+}
+
+.manifesto p {
+    max-width: 650px;
+    color: #687A76;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* 04.5 Áreas de acción */
+
+.opportunities {
+    max-width: var(--container);
+    margin: auto;
+    padding: 110px 32px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    margin-top: 18px;
+
+    font-family: var(--font-display);
+    font-size: clamp(34px, 4vw, 48px);
+    letter-spacing: -2px;
+    line-height: 1.18;
+}
+
+.section-heading > p {
+    max-width: 300px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.area-card {
+    min-height: 320px;
+    padding: 29px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: white;
+    border: 1px solid #E5E9E1;
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+}
+
+.area-card:hover {
+    transform: translateY(-7px);
+    border-color: #B7CD98;
+    box-shadow: var(--shadow-card);
+}
+
+.card-index {
+    color: #84938B;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.card-icon {
+    width: 49px;
+    height: 49px;
+    margin: 30px 0 22px;
+
+    display: grid;
+    place-items: center;
+
+    background: #EEF2E7;
+    color: #6C8B4E;
+    border-radius: 13px;
+    font-size: 27px;
+}
+
+.area-card h3 {
+    margin-bottom: 10px;
+
+    font-family: var(--font-display);
+    font-size: 20px;
+    letter-spacing: -0.7px;
+}
+
+.area-card p {
+    margin-bottom: 25px;
+
+    color: #71807D;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.area-card a {
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.area-card a span {
+    color: #7FA747;
+    font-size: 17px;
+}
+
+.area-card.featured {
+    background: var(--ink);
+    color: white;
+    border-color: var(--ink);
+}
+
+.area-card.featured .card-index,
+.area-card.featured p {
+    color: #A8BAB5;
+}
+
+.area-card.featured .card-icon {
+    background: rgba(165, 201, 106, 0.14);
+    color: var(--accent);
+}
+
+.area-card.featured a {
+    color: white;
+}
+
+
+/* 04.6 Llamado final */
+
+.final-cta {
+    padding: 100px 32px;
+    position: relative;
+    overflow: hidden;
+
+    background: var(--ink);
+    color: white;
+    text-align: center;
+}
+
+.cta-decoration {
+    position: absolute;
+    top: -105px;
+    right: 3%;
+
+    color: rgba(255, 255, 255, 0.025);
+    font-family: var(--font-display);
+    font-size: 420px;
+    font-weight: 800;
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+.cta-content {
+    max-width: 760px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content > span {
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.cta-content h2 {
+    margin: 24px 0;
+
+    font-family: var(--font-display);
+    font-size: clamp(35px, 4.5vw, 55px);
+    line-height: 1.2;
+    letter-spacing: -2.5px;
+}
+
+.cta-content h2 span {
+    color: var(--accent);
+}
+
+.cta-content p {
+    max-width: 520px;
+    margin: auto;
+
+    color: #B4C3BD;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    margin-top: 32px;
+    padding: 17px 23px;
+
+    background: var(--accent);
+    color: var(--ink);
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background: #C1DC8F;
+    transform: translateY(-3px);
+}
+
+
+/* 04.7 Pie de página */
+
+.footer {
+    background: #10242A;
+    color: white;
+}
+
+.footer-inner {
+    max-width: var(--container);
+    min-height: 100px;
+    margin: auto;
+    padding: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-brand {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.footer-inner p {
+    color: #AABAB5;
+    font-size: 11px;
+}
+
+.copyright {
+    color: #82938E;
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   05. PÁGINA DE ACTIVIDADES
+   ===================================================== */
+
+.activities-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+}
+
+
+/* 05.1 Encabezado */
+
+.activities-header {
+    width: 100%;
+    background: rgba(245, 245, 239, 0.96);
+    border-bottom: 1px solid var(--line);
+}
+
+.activities-header__inner {
+    max-width: var(--container);
+    min-height: 88px;
+    margin: auto;
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.activities-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.activities-brand strong {
+    color: #7FA747;
+}
+
+.activities-brand__symbol {
+    width: 39px;
+    height: 39px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--ink);
+    color: var(--accent);
+    border-radius: 11px;
+
+    font-size: 19px;
+}
+
+.activities-navigation {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.activities-navigation a {
+    position: relative;
+    color: #627276;
+    font-size: 12px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.activities-navigation a:hover,
+.activities-navigation a.active {
+    color: var(--ink);
+}
+
+.activities-navigation a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 2px;
+    background: var(--accent);
+}
+
+
+/* 05.2 Contenido */
+
+.activities-main {
+    width: 100%;
+    max-width: var(--container);
+    margin: auto;
+    padding: 85px 32px 110px;
+    flex: 1;
+}
+
+
+/* 05.3 Presentación */
+
+.activities-intro {
+    max-width: 720px;
+    margin-bottom: 65px;
+}
+
+.activities-kicker {
+    color: #718A5A;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.activities-intro h1 {
+    margin: 22px 0;
+
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.13;
+    letter-spacing: -2.8px;
+}
+
+.activities-intro h1 span {
+    color: #829D65;
+}
+
+.activities-intro p {
+    max-width: 560px;
+    color: #71807D;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* 05.4 Filtros */
+
+.filter-section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--line);
+}
+
+.filter-section__text h2 {
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 24px;
+    letter-spacing: -0.8px;
+}
+
+.filter-section__text p {
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.filter-control {
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-control label {
+    color: var(--ink);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.filter-control select {
+    width: 100%;
+    min-height: 45px;
+    padding: 0 14px;
+
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+
+    color: var(--ink);
+    font-family: var(--font-main);
+    font-size: 12px;
+    outline: none;
+}
+
+.filter-control select:focus {
+    border-color: #829D65;
+    box-shadow: 0 0 0 3px rgba(165, 201, 106, 0.15);
+}
+
+
+/* 05.5 Cuadrícula de actividades */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+}
+
+
+/* 05.6 Tarjetas */
+
+.activities-page .card {
+    min-width: 0;
+    padding: 27px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: white;
+    border: 1px solid #E5E9E1;
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+}
+
+.activities-page .card:hover {
+    transform: translateY(-5px);
+    border-color: #B7CD98;
+    box-shadow: var(--shadow-card);
+}
+
+.activities-page .card h3 {
+    margin: 17px 0 15px;
+
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 19px;
+    line-height: 1.35;
+    letter-spacing: -0.5px;
+}
+
+.activities-page .card p {
+    margin-top: 10px;
+    color: #71807D;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.activities-page .card p strong {
+    color: #344B4C;
+}
+
+
+/* 05.7 Etiquetas de categorías */
+
+.activities-page .badge {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 11px;
+
+    background: var(--soft-green);
+    color: #637F48;
+    border-radius: 30px;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+
+/* 05.8 Disponibilidad */
+
+.activities-page .no-cupos {
+    color: #A45F50 !important;
+}
+
+
+/* 05.9 Botones de postulación */
+
+.activities-page .btn-primary {
+    width: 100%;
+    min-height: 45px;
+    padding: 12px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--ink);
+    border: none;
+    border-radius: 6px;
+
+    color: white;
+    font-family: var(--font-main);
+    font-size: 11px;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.activities-page a.btn-primary:hover {
+    background: var(--ink-light);
+    transform: translateY(-2px);
+}
+
+.activities-page button.btn-primary:disabled {
+    background: #E5E9E1 !important;
+    color: #7C8983;
+    cursor: not-allowed !important;
+    transform: none;
+}
+
+
+/* 05.10 Pie de página */
+
+.activities-footer {
+    min-height: 90px;
+    padding: 25px 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    background: #10242A;
+    color: white;
+}
+
+.activities-footer p {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.activities-footer span {
+    color: #AABAB5;
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   06. PÁGINA DE INSCRIPCIÓN
+   ===================================================== */
+
+.registration-page {
+    background: var(--paper);
+    color: var(--ink);
+}
+
+
+/* 06.1 Encabezado institucional */
+
+.site-header {
+    width: 100%;
+    background: rgba(245, 245, 239, 0.96);
+    border-bottom: 1px solid var(--line);
+}
+
+.site-header__container {
+    max-width: var(--container);
+    min-height: 88px;
+    margin: auto;
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.brand__symbol {
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--ink);
+    color: var(--accent);
+    border-radius: 11px;
+
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.brand__identity {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.brand__name {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.brand__location {
+    color: #7C8983;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+/* 06.2 Navegación */
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.main-navigation__link {
+    position: relative;
+    color: #627276;
+    font-size: 12px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.main-navigation__link:hover,
+.main-navigation__link--active {
+    color: var(--ink);
+}
+
+.main-navigation__link--active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 2px;
+    background: var(--accent);
+}
+
+
+/* 06.3 Contenido principal */
+
+.registration-main {
+    max-width: var(--container);
+    margin: auto;
+    padding: 70px 32px 90px;
+}
+
+
+/* 06.4 Presentación de inscripción */
+
+.registration-hero {
+    margin-bottom: 55px;
+
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.registration-hero__content {
+    max-width: 690px;
+}
+
+.registration-hero__eyebrow {
+    color: #718A5A;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.registration-hero__title {
+    margin: 22px 0;
+
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: clamp(38px, 4.5vw, 56px);
+    line-height: 1.13;
+    letter-spacing: -2.8px;
+}
+
+.registration-hero__title span {
+    color: #829D65;
+}
+
+.registration-hero__description {
+    max-width: 550px;
+    color: #71807D;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* 06.5 Elemento visual */
+
+.registration-hero__visual {
+    min-height: 210px;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+
+    background: var(--ink);
+    border-radius: 8px;
+    color: white;
+}
+
+.registration-hero__visual::before,
+.registration-hero__visual::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(165, 201, 106, 0.25);
+    border-radius: 50%;
+}
+
+.registration-hero__visual::before {
+    width: 180px;
+    height: 180px;
+    top: 25px;
+    right: -35px;
+}
+
+.registration-hero__visual::after {
+    width: 120px;
+    height: 120px;
+    top: 55px;
+    right: -5px;
+}
+
+.registration-hero__visual-label,
+.registration-hero__visual-number,
+.registration-hero__visual-caption {
+    position: relative;
+    z-index: 1;
+}
+
+.registration-hero__visual-label {
+    color: #B3C4B5;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.registration-hero__visual-number {
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: 65px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -4px;
+}
+
+.registration-hero__visual-caption {
+    color: #C4D0C9;
+    font-size: 11px;
+}
+
+
+/* 06.6 Contenedor del formulario */
+
+.registration-layout {
+    padding: 48px clamp(25px, 5vw, 65px);
+
+    background: white;
+    border: 1px solid #E3E8DF;
+    border-radius: 12px;
+
+    box-shadow: 0 20px 60px rgba(20, 43, 50, 0.045);
+}
+
+
+/* 06.7 Encabezado del formulario */
+
+.registration-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+
+    margin-bottom: 35px;
+}
+
+.registration-heading__eyebrow {
+    color: #7C9661;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.registration-heading h2 {
+    margin: 10px 0;
+
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 30px;
+    line-height: 1.25;
+    letter-spacing: -1.5px;
+}
+
+.registration-heading__text p {
+    color: #7A8985;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.registration-heading__reference {
+    padding: 8px 11px;
+    background: var(--soft-green);
+    color: #708B4F;
+    border-radius: 5px;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+
+/* 06.8 Progreso del formulario */
+
+.registration-progress {
+    margin-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.registration-progress__step {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #87938C;
+}
+
+.registration-progress__number {
+    width: 29px;
+    height: 29px;
+
+    display: grid;
+    place-items: center;
+
+    background: #F0F2ED;
+    border-radius: 50%;
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.registration-progress__step--active {
+    color: var(--ink);
+}
+
+.registration-progress__step--active .registration-progress__number {
+    background: var(--ink);
+    color: var(--accent);
+}
+
+.registration-progress__label {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.registration-progress__connector {
+    height: 1px;
+    flex: 1;
+    background: var(--line);
+}
+
+
+/* 06.9 Formulario */
+
+.registration-form {
+    width: 100%;
+}
+
+.form-fieldset {
+    min-width: 0;
+    border: none;
+}
+
+.form-fieldset__legend {
+    width: 100%;
+    margin-bottom: 13px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.form-fieldset__number {
+    width: 29px;
+    height: 29px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--soft-green);
+    color: #708B4F;
+    border-radius: 7px;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.form-fieldset__description {
+    margin-bottom: 23px;
+    color: #7A8985;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* 06.10 Distribución de campos */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+}
+
+.form-field {
+    min-width: 0;
+    margin-bottom: 22px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-field--full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    color: #263C3F;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.form-field label span {
+    color: #8EAC60;
+}
+
+
+/* 06.11 Campos de entrada */
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 14px 15px;
+
+    background: #FAFBF8;
+    border: 1px solid #DFE5DC;
+    border-radius: 6px;
+
+    color: var(--ink);
+    font-family: var(--font-main);
+    font-size: 12px;
+
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-field input,
+.form-field select {
+    min-height: 48px;
+}
+
+.form-field textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #A7B1AB;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    background: white;
+    border-color: #829D65;
+    box-shadow: 0 0 0 3px rgba(165, 201, 106, 0.13);
+}
+
+.form-field__hint {
+    color: #89958F;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* 06.12 Separadores */
+
+.registration-form__divider {
+    height: 1px;
+    margin: 30px 0;
+    background: #E8ECE5;
+}
+
+
+/* 06.13 Confirmación */
+
+.consent-section {
+    padding: 21px;
+    background: #F8F9F5;
+    border: 1px solid #E6EADF;
+    border-radius: 8px;
+}
+
+.consent-section__content h3 {
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.consent-section__content p {
+    margin-top: 5px;
+    color: #7A8985;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.consent-control {
+    margin-top: 18px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    cursor: pointer;
+}
+
+.consent-control input {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+
+    accent-color: #829D65;
+    flex-shrink: 0;
+}
+
+.consent-control span {
+    color: #64736E;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+
+/* 06.14 Acciones del formulario */
+
+.form-actions {
+    margin-top: 28px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-actions__information {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.form-actions__indicator {
+    color: #829D65;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.form-actions__information p {
+    color: #89958F;
+    font-size: 10px;
+}
+
+.btn-primary {
+    min-height: 53px;
+    min-width: 210px;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    background: var(--ink);
+    color: white;
+    border: none;
+    border-radius: 6px;
+
+    font-family: var(--font-main);
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: #29484A;
+    transform: translateY(-2px);
+}
+
+.btn-primary:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-primary__icon {
+    color: var(--accent);
+    font-size: 18px;
+}
+
+
+/* 06.15 Mensaje institucional */
+
+.registration-message {
+    max-width: 700px;
+    margin: 45px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    text-align: center;
+}
+
+.registration-message__symbol {
+    color: #829D65;
+    font-size: 23px;
+}
+
+.registration-message p {
+    color: #71807D;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* 06.16 Pie de página */
+
+.site-footer__container {
+    max-width: var(--container);
+    min-height: 90px;
+    margin: auto;
+    padding: 25px 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.site-footer__copyright {
+    color: #AABAB5;
+    font-size: 10px;
+}
+
+.site-footer__message {
+    color: #82938E;
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   07. ADAPTACIÓN RESPONSIVE
+   ===================================================== */
+
+
+/* 07.1 Pantallas medianas */
+
+@media (max-width: 900px) {
+
+    /* Inicio */
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 75px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .network-visual {
+        min-height: 420px;
+    }
+
+    .manifesto {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .area-card:last-child {
+        grid-column: span 2;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    /* Actividades */
+    .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Inscripción */
+    .registration-hero {
+        grid-template-columns: 1fr 0.65fr;
+        gap: 25px;
+    }
+}
+
+
+/* 07.2 Tabletas y móviles */
+
+@media (max-width: 650px) {
+
+    /* Inicio: encabezado */
+    .header-inner {
+        padding: 17px 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .brand-symbol {
+        width: 35px;
+        height: 35px;
+    }
+
+    .brand-text strong {
+        font-size: 19px;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .nav-item {
+        font-size: 11px;
+    }
+
+    .nav-item.active::after {
+        bottom: -6px;
+    }
+
+    /* Inicio: hero */
+    .hero {
+        padding: 65px 21px 70px;
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        letter-spacing: -2.5px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .button-primary,
+    .button-outline {
+        width: 100%;
+    }
+
+    .hero-note {
+        margin-top: 30px;
+        font-size: 10px;
+    }
+
+    /* Inicio: visualización */
+    .network-visual {
+        min-height: 350px;
+        padding: 17px;
+    }
+
+    .network-art {
+        max-height: 250px;
+    }
+
+    .visual-top {
+        font-size: 8px;
+    }
+
+    /* Inicio: manifiesto */
+    .manifesto {
+        padding: 65px 22px;
+    }
+
+    .manifesto h2 {
+        font-size: 35px;
+    }
+
+    /* Inicio: áreas */
+    .opportunities {
+        padding: 75px 21px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .area-card:last-child {
+        grid-column: auto;
+    }
+
+    .area-card {
+        min-height: 300px;
+    }
+
+    /* Inicio: llamado final */
+    .final-cta {
+        padding: 75px 23px;
+    }
+
+    .cta-content h2 {
+        font-size: 37px;
+    }
+
+    /* Inicio: pie */
+    .footer-inner {
+        padding: 30px 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    /* Actividades: encabezado */
+    .activities-header__inner {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .activities-navigation {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .activities-navigation a {
+        font-size: 11px;
+    }
+
+    /* Actividades: contenido */
+    .activities-main {
+        padding: 60px 20px 75px;
+    }
+
+    .activities-intro {
+        margin-bottom: 45px;
+    }
+
+    .activities-intro h1 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .filter-section {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filter-control {
+        width: 100%;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 25px 20px;
+    }
+
+
+    /* Inscripción: encabezado */
+    .site-header__container {
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .main-navigation {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .main-navigation__link {
+        font-size: 11px;
+    }
+
+    /* Inscripción: contenido */
+    .registration-main {
+        padding: 55px 20px 70px;
+    }
+
+    .registration-hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 35px;
+    }
+
+    .registration-hero__title {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .registration-hero__visual {
+        min-height: 175px;
+    }
+
+    /* Inscripción: formulario */
+    .registration-layout {
+        padding: 32px 22px;
+    }
+
+    .registration-heading h2 {
+        font-size: 25px;
+    }
+
+    .registration-progress {
+        gap: 7px;
+    }
+
+    .registration-progress__step {
+        gap: 5px;
+    }
+
+    .registration-progress__label {
+        font-size: 9px;
+    }
+
+    .registration-progress__connector {
+        min-width: 8px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field--full {
+        grid-column: auto;
+    }
+
+    .form-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .registration-message {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .site-footer__container {
+        padding: 25px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =====================================================
+   08. ACCESIBILIDAD Y MOVIMIENTO
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

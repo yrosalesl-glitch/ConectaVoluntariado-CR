@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "titulo": "Limpieza Comunitaria en Playa Manuel Antonio",
+    "categoria": "Ambiente",
+    "provincia": "Puntarenas",
+    "fecha": "2026-11-20",
+    "hora": "08:00 AM - 12:00 PM",
+    "organizacion": "Asociación Ecológica del Pacífico",
+    "cuposDisponibles": 8,
+    "descripcion": "Jornada de recolección y clasificación de residuos sólidos en la playa y senderos aledaños."
+  },
+  {
+    "id": 2,
+    "titulo": "Tutorías Académicas para Niños de Primaria",
+    "categoria": "Educación",
+    "provincia": "San José",
+    "fecha": "2026-11-22",
+    "hora": "01:00 PM - 04:00 PM",
+    "organizacion": "Fundación Educación para Todos",
+    "cuposDisponibles": 5,
+    "descripcion": "Apoyo escolar en matemáticas y lectura para niños de escasos recursos en la comunidad de Desamparados."
+  },
+  {
+    "id": 3,
+    "titulo": "Jornada de Adopción y Cuidado Animal",
+    "categoria": "Bienestar Animal",
+    "provincia": "Heredia",
+    "fecha": "2026-11-25",
+    "hora": "09:00 AM - 02:00 PM",
+    "organizacion": "Rescate Animal CR",
+    "cuposDisponibles": 0,
+    "descripcion": "Apoyo en logística, paseo de perritos rescatados y atención al público durante la feria de adopción."
+  },
+  {
+    "id": 4,
+    "titulo": "Reforestación de Cuenca Hidrográfica",
+    "categoria": "Ambiente",
+    "provincia": "Cartago",
+    "fecha": "2026-12-01",
+    "hora": "07:00 AM - 11:30 AM",
+    "organizacion": "Red Verde Cartago",
+    "cuposDisponibles": 12,
+    "descripcion": "Siembra de árboles nativos en la cuenca alta para proteger fuentes hídricas cantonales."
+  },
+  {
+    "id": 5,
+    "titulo": "Taller de Alfabetización Digital para Adultos Mayores",
+    "categoria": "Educación",
+    "provincia": "Alajuela",
+    "fecha": "2026-12-05",
+    "hora": "02:00 PM - 05:00 PM",
+    "organizacion": "Conexión Senior CR",
+    "cuposDisponibles": 3,
+    "descripcion": "Enseñanza del uso básico de teléfonos inteligentes y trámites en línea para personas adultas mayores."
+  }
+]
