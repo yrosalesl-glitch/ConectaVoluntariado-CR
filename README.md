@@ -18,7 +18,7 @@ ConectaVoluntariado CR es una aplicación web que busca centralizar la gestión 
 
 - [Maria Celeste Rodriguez Solano]
 - [Yarelis Judith Rosales Leiva]
-- [Drivan Cuebro]
+- [Drivan Cubero]
 
 
 
